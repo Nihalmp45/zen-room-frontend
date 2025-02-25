@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom"; // Fixed import
 
@@ -92,7 +91,6 @@ const Signup = () => {
           Already have an account? <Link to="/login" className="text-blue-400 hover:underline">Log in</Link>
         </p>
 
-        <DevTool control={control} />
       </div>
     </div>
   );

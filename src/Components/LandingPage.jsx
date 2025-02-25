@@ -49,48 +49,36 @@ const LandingPage = () => {
   return (
     <div className="bg-gray-900 min-h-screen text-white w-screen overflow-x-hidden">
       {/* Navbar */}
-      <nav className="bg-gray-900 text-white py-4 px-6 flex justify-between items-center shadow-lg mx-8">
-        {/* Logo (Increased Size) */}
+      <nav className="bg-gray-900 text-white py-4 px-6 flex flex-wrap items-center justify-between shadow-lg">
+        {/* Logo */}
         <div className="flex items-center">
           <img
             src="/Images/zen Rooms.png"
             alt="Zen Rooms"
-            className="h-20 w-auto"
+            className="h-14 w-auto"
           />
         </div>
 
-        {/* Auth Buttons */}
+        {/* Auth Buttons - Auto Stack on Small Screens */}
         <div className="flex space-x-4">
           <Link to="/sign-up">
-            <button className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 rounded-full transition duration-300 cursor-pointer">
+            <button className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white px-4 py-2 rounded-full transition duration-300 text-sm md:text-base">
               Sign Up
             </button>
           </Link>
           <Link to="/login">
-            <button className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white px-6 py-2 rounded-full transition duration-300 cursor-pointer">
+            <button className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white px-4 py-2 rounded-full transition duration-300 text-sm md:text-base">
               Login
             </button>
           </Link>
         </div>
       </nav>
 
-      {/* Explore Hotels Section */}
-      <div className="text-center pt-8 px-4">
-        <h2 className="text-4xl font-bold">Explore Our Exclusive Hotels</h2>
-        <p className="text-lg text-gray-300 mt-4">
-          Discover luxury stays, cozy retreats, and budget-friendly options
-          tailored for your perfect getaway.
-        </p>
+      <div className="w-full overflow-x-hidden">
+        <RollingGallery autoplay={true} pauseOnHover={true} />
       </div>
 
-      <div
-        style={{ height: "600px", position: "relative", overflowX: "hidden" }}
-      >
-        <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} />
-      </div>
-
-      {/* Why Choose Us Section */}
-      <div className="bg-gray-900 text-white pt-28 px-6 pb-12">
+      <div className="bg-gray-900 text-white pt-12 px-6 pb-12">
         <h2 className="text-4xl font-bold text-center mb-8">
           Why Choose Zen Rooms?
         </h2>
@@ -111,13 +99,29 @@ const LandingPage = () => {
         </div>
       </div>
 
-      {/* Rolling Gallery */}
-      <div className="w-full overflow-x-hidden">
-        <RollingGallery autoplay={true} pauseOnHover={true} />
+      {/* Explore Hotels Section */}
+      <div className="text-center pt-8 px-4">
+        <h2 className="text-4xl font-bold">Explore Our Exclusive Hotels</h2>
+        <p className="text-lg text-gray-300 mt-4">
+          Discover luxury stays, cozy retreats, and budget-friendly options
+          tailored for your perfect getaway.
+        </p>
       </div>
 
+      <div
+        style={{ height: "600px", position: "relative", overflowX: "hidden" }}
+      >
+        <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} />
+      </div>
+
+      {/* Why Choose Us Section */}
+      
+
+      {/* Rolling Gallery */}
+     
+
       {/* Start Your Journey Section */}
-      <div className="bg-gray-900 text-white py-16 px-6 text-center mt-12">
+      <div className="bg-gray-900 text-white py-8 px-6 text-center mt-6">
         <h2 className="text-4xl font-bold">Start Your Journey with Us</h2>
         <p className="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
           Whether you're looking for luxury, budget-friendly stays, or hidden
@@ -132,7 +136,7 @@ const LandingPage = () => {
       </div>
 
       {/* Stack Component - Centered */}
-      <div className="flex flex-col items-center justify-center py-16">
+      <div className="flex flex-col items-center justify-center py-6">
         <h1 className="text-3xl font-bold text-white mb-6 flex items-center gap-2">
           🖐️ Hold & Drag Me Away 👇
         </h1>
